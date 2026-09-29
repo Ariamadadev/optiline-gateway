@@ -79,3 +79,13 @@ export function PhotoBanner({ k, caption }: { k: Key; caption?: string }) {
     </figure>
   );
 }
+
+/** Two photos side by side — portrait-friendly, faces kept in frame. */
+export function PhotoDuo({ a, b }: { a: Key; b: Key }) {
+  return (
+    <div className="my-12 grid gap-4 md:grid-cols-2">
+      <Tile k={a} className="aspect-[4/3]" />
+      <Tile k={b} className="aspect-[4/3]" />
+    </div>
+  );
+}

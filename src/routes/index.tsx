@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { PhotoGallery, PhotoBanner } from "@/components/PhotoGallery";
+import { PhotoGallery, PhotoBanner, PhotoDuo } from "@/components/PhotoGallery";
 import officeTeam from "@/assets/office-team.jpg";
 import worldNetworkMap from "@/assets/world-network-map.jpg";
 import { useLanguage } from "@/i18n/language";
@@ -138,6 +138,7 @@ function Index() {
           </div>
         </section>
 
+        <PhotoBanner k="teamMeeting" caption="Your dedicated team, managed locally" />
         {/* SOLUTIONS */}
         <section className="py-16 md:py-20">
           <SectionHeading
@@ -178,6 +179,7 @@ function Index() {
           </div>
         </section>
 
+        <PhotoBanner k="openOffice" caption="Workspaces ready for your team" />
         {/* WE TAKE CARE OF EVERYTHING */}
         <section className="section-wash-warm py-20 md:py-24">
           <SectionHeading
@@ -260,6 +262,7 @@ function Index() {
           </div>
         </section>
 
+        <PhotoBanner k="building" caption="Modern premises in Antsirabe" />
         {/* INFRASTRUCTURE */}
         <section className="section-wash-blue border-t border-border py-20 md:py-24">
           <SectionHeading
@@ -287,6 +290,7 @@ function Index() {
           </div>
         </section>
 
+        <PhotoDuo a="agent" b="developers" />
         {/* TALENT */}
         <section className="py-16 md:py-20">
           <SectionHeading
@@ -388,6 +392,7 @@ function Index() {
           </div>
         </section>
 
+        <PhotoBanner k="training" caption="Onboarding & continuous training" />
         {/* HOW IT WORKS — 5 STEPS */}
         <section className="border-t border-border py-20 md:py-24">
           <SectionHeading
@@ -425,6 +430,7 @@ function Index() {
           </div>
         </section>
 
+        <PhotoDuo a="officeTeam" b="teamMeeting" />
         {/* INDUSTRIES */}
         <section className="border-t border-border py-20 md:py-24">
           <div className="mb-10">
