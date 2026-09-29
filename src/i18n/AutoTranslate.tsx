@@ -68,7 +68,8 @@ export function AutoTranslate() {
     const dict = lang === "en" ? null : (dicts[lang] ?? null);
     walk(document.body, dict);
     const titleRec = { en: document.title };
-    if (dict?.[document.title]) document.title = dict[document.title];
+    const tt = dict?.[document.title];
+    if (tt) document.title = tt;
 
     let busy = false;
     const obs = new MutationObserver((muts) => {
