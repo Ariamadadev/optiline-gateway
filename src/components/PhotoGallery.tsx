@@ -28,7 +28,7 @@ function Tile({ k, className = "" }: { k: Key; className?: string }) {
         height={p.h}
         alt={p.alt}
         loading="lazy"
-        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        className="h-full w-full object-cover object-[center_20%] transition-transform duration-700 group-hover:scale-105"
       />
       <figcaption className="absolute bottom-3 left-3 border-l-4 border-accent bg-navy/85 px-3 py-1.5 text-[12px] font-semibold text-navy-foreground backdrop-blur">
         {p.label}
@@ -58,8 +58,8 @@ export function PhotoGallery({
         {b && <Tile k={b} className="row-span-2" />}
         {c && <Tile k={c} />}
         {d && <Tile k={d} />}
-        {e && <Tile k={e} className="col-span-2" />}
-        {f && <Tile k={f} className="col-span-2" />}
+        {e && <Tile k={e} className="col-span-2 row-span-2" />}
+        {f && <Tile k={f} className="col-span-2 row-span-2" />}
       </div>
     </section>
   );
@@ -70,7 +70,7 @@ export function PhotoBanner({ k, caption }: { k: Key; caption?: string }) {
   const p = photos[k];
   return (
     <figure className="relative my-12 overflow-hidden rounded-xl border border-border shadow-elevate">
-      <img src={p.src} width={p.w} height={p.h} alt={p.alt} loading="lazy" className="aspect-[21/9] w-full object-cover" />
+      <img src={p.src} width={p.w} height={p.h} alt={p.alt} loading="lazy" className="aspect-[21/9] w-full object-cover object-[center_25%]" />
       {caption && (
         <figcaption className="absolute bottom-4 left-4 border-l-4 border-coral bg-navy px-5 py-3 text-[14px] font-bold text-navy-foreground">
           {caption}
