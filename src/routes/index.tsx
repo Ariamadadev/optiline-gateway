@@ -482,21 +482,30 @@ function Index() {
           </p>
         </section>
 
-        {/* TESTIMONIALS — placeholders */}
+        {/* COMMITMENTS (replace with real testimonials once approved) */}
         <section className="border-t border-border py-20 md:py-24">
-          <SectionHeading eyebrow="(l) — Clients" title="What Our Clients Say" className="mb-10" />
+          <SectionHeading eyebrow="(l) — Our promise" title="Our Commitments to Your Business" className="mb-10" />
           <div className="grid gap-4 md:grid-cols-3">
-            {[1, 2, 3].map((n) => (
-              <blockquote key={n} className="rounded-xl border border-dashed border-line bg-paper/60 p-6">
-                <p className="text-[14px] leading-relaxed text-muted-foreground">
-                  [Client testimonial placeholder {n} — to be replaced with a real, approved client
-                  quote.]
-                </p>
-                <footer className="mt-4 text-[12.5px] text-muted-foreground/80">
-                  [Name, role, company — to be provided]
-                </footer>
+            {[
+              { q: "A dedicated manager follows your team every day and reports to you regularly.", who: "Transparent management", bar: "bg-accent" },
+              { q: "Your data and processes are protected with strict access rules and confidentiality agreements.", who: "Security & confidentiality", bar: "bg-coral" },
+              { q: "You start small, test the quality, then scale your team at your own pace.", who: "Flexible growth", bar: "bg-sun" },
+            ].map((c) => (
+              <blockquote key={c.who} className="relative overflow-hidden rounded-xl border border-border bg-card p-6 shadow-elevate">
+                <span className={`absolute left-0 top-0 h-1 w-full ${c.bar}`} />
+                <p className="text-3xl leading-none text-accent">“</p>
+                <p className="mt-2 text-[15px] leading-relaxed">{c.q}</p>
+                <footer className="mt-4 text-[13px] font-semibold text-muted-foreground">{c.who}</footer>
               </blockquote>
             ))}
+          </div>
+          <div className="mt-10 rounded-xl border border-border bg-paper/60 p-6 text-center">
+            <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground">Built for companies in</p>
+            <div className="mt-4 flex flex-wrap justify-center gap-x-10 gap-y-3 text-lg font-bold text-foreground/70">
+              {["France", "Belgium", "Switzerland", "Germany", "United Kingdom", "Canada", "United States"].map((m) => (
+                <span key={m}>{m}</span>
+              ))}
+            </div>
           </div>
         </section>
         <PhotoGallery />
