@@ -62,10 +62,18 @@ function ContactPage() {
                 </dd>
               </div>
               <div>
-                <dt className="text-[12px] uppercase tracking-[0.16em] text-muted-foreground">Phone</dt>
+                <dt className="text-[12px] uppercase tracking-[0.16em] text-muted-foreground">Contact in France</dt>
                 <dd className="mt-1 text-foreground">
-                  <a href={`tel:${site.contact.phone.replace(/\s/g, "")}`} className="hover:text-blue">
-                    {site.contact.phone}
+                  <a href={`tel:${site.contact.phoneFrance.replace(/\s/g, "")}`} className="hover:text-blue">
+                    {site.contact.phoneFrance}
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt className="text-[12px] uppercase tracking-[0.16em] text-muted-foreground">Contact in Madagascar</dt>
+                <dd className="mt-1 text-foreground">
+                  <a href={`tel:${site.contact.phoneMadagascar.replace(/\s/g, "")}`} className="hover:text-blue">
+                    {site.contact.phoneMadagascar}
                   </a>
                 </dd>
               </div>
