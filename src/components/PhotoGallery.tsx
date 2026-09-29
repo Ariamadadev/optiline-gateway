@@ -58,8 +58,8 @@ export function PhotoGallery({
         {b && <Tile k={b} className="row-span-2" />}
         {c && <Tile k={c} />}
         {d && <Tile k={d} />}
-        {e && <Tile k={e} className="row-span-2 md:row-span-1" />}
-        {f && <Tile k={f} className="col-span-2 md:col-span-1" />}
+        {e && <Tile k={e} className="col-span-2" />}
+        {f && <Tile k={f} className="col-span-2" />}
       </div>
     </section>
   );
