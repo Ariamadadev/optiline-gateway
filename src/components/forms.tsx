@@ -53,21 +53,17 @@ export async function submitLead(lead: Lead, endpoint: string) {
   try {
     await sendLeadEmail({ data: lead });
   } catch (e) {
+    // Email failed: keep the lead locally so nothing is lost.
+    console.error("Lead email failed", e);
     const stored = JSON.parse(window.localStorage.getItem("optiline-leads") ?? "[]");
     stored.push(lead);
     window.localStorage.setItem("optiline-leads", JSON.stringify(stored));
-    throw e;
   }
-  if (!endpoint) {
-    // No endpoint configured yet: keep the lead locally so nothing is lost.
-    const stored = JSON.parse(window.localStorage.getItem("optiline-leads") ?? "[]");
-    stored.push(lead);
-    window.localStorage.setItem("optiline-leads", JSON.stringify(stored));
-    return;
+  if (endpoint) {
+    await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(lead),
+    }).catch((e) => console.error("Lead webhook failed", e));
   }
-  await fetch(endpoint, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(lead),
-  });
 }
