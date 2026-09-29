@@ -5,6 +5,27 @@ import teamMeeting from "@/assets/team-meeting.jpg";
 import developers from "@/assets/developers.jpg";
 import training from "@/assets/training.jpg";
 import officeTeam from "@/assets/office-team.jpg";
+import heroEuro from "@/assets/hero-euro.jpg";
+import clientCall from "@/assets/client-call.jpg";
+import leaders from "@/assets/leaders.jpg";
+import handshake from "@/assets/handshake.jpg";
+import whiteboard from "@/assets/whiteboard.jpg";
+import coffeeBreak from "@/assets/coffee-break.jpg";
+import coaching from "@/assets/coaching.jpg";
+import newHires from "@/assets/new-hires.jpg";
+import interview from "@/assets/interview.jpg";
+import terrace from "@/assets/terrace.jpg";
+import backOffice from "@/assets/back-office.jpg";
+import creativeTeam from "@/assets/creative-team.jpg";
+import supportAgent from "@/assets/support-agent.jpg";
+import serverRoom from "@/assets/server-room.jpg";
+import reception from "@/assets/reception.jpg";
+import projectWalk from "@/assets/project-walk.jpg";
+import insightsReader from "@/assets/insights-reader.jpg";
+import helpDesk from "@/assets/help-desk.jpg";
+import antsirabe from "@/assets/antsirabe.jpg";
+import industryTeam from "@/assets/industry-team.jpg";
+import dedicatedTeam from "@/assets/dedicated-team.jpg";
 
 export const photos = {
   building: { src: building, w: 1536, h: 1024, alt: "Modern office building in Antsirabe, Madagascar", label: "Our building" },
@@ -14,6 +35,27 @@ export const photos = {
   developers: { src: developers, w: 1024, h: 1280, alt: "Two developers working together at dual monitors", label: "IT & development" },
   training: { src: training, w: 1536, h: 1024, alt: "Trainer presenting to young professionals", label: "Training" },
   officeTeam: { src: officeTeam, w: 1024, h: 1280, alt: "Professionals at modern workstations", label: "Daily operations" },
+  heroEuro: { src: heroEuro, w: 1024, h: 1280, alt: "European manager and Malagasy team lead reviewing work together", label: "Partnership" },
+  clientCall: { src: clientCall, w: 1536, h: 1024, alt: "Team member on a video call with European clients", label: "Client calls" },
+  leaders: { src: leaders, w: 1024, h: 1280, alt: "European and Malagasy leadership team", label: "Leadership" },
+  handshake: { src: handshake, w: 1536, h: 1024, alt: "European visitors greeted by Malagasy managers", label: "Client visits" },
+  whiteboard: { src: whiteboard, w: 1536, h: 1024, alt: "Mixed team brainstorming at a whiteboard", label: "Collaboration" },
+  coffeeBreak: { src: coffeeBreak, w: 1536, h: 1024, alt: "Colleagues sharing a coffee break", label: "Team culture" },
+  coaching: { src: coaching, w: 1536, h: 1024, alt: "Quality manager coaching a customer service agent", label: "Coaching" },
+  newHires: { src: newHires, w: 1536, h: 1024, alt: "New hires celebrating together", label: "New talent" },
+  interview: { src: interview, w: 1536, h: 1024, alt: "Candidate in a job interview", label: "Recruitment" },
+  terrace: { src: terrace, w: 1536, h: 1024, alt: "Professional working on a terrace overlooking Antsirabe", label: "Work in Antsirabe" },
+  backOffice: { src: backOffice, w: 1536, h: 1024, alt: "Back-office team reviewing data with a supervisor", label: "Back office" },
+  creativeTeam: { src: creativeTeam, w: 1536, h: 1024, alt: "Creative team reviewing a design", label: "Digital & creative" },
+  supportAgent: { src: supportAgent, w: 1536, h: 1024, alt: "Smiling support agent with headset", label: "Customer support" },
+  serverRoom: { src: serverRoom, w: 1536, h: 1024, alt: "Technician checking network equipment", label: "Infrastructure" },
+  reception: { src: reception, w: 1536, h: 1024, alt: "Visitor welcomed at the office reception", label: "Reception" },
+  projectWalk: { src: projectWalk, w: 1536, h: 1024, alt: "Project manager and team lead in discussion", label: "Project follow-up" },
+  insightsReader: { src: insightsReader, w: 1536, h: 1024, alt: "Businesswoman reading on a tablet", label: "Insights" },
+  helpDesk: { src: helpDesk, w: 1536, h: 1024, alt: "Help desk agent answering customers", label: "Help desk" },
+  antsirabe: { src: antsirabe, w: 1536, h: 1024, alt: "Aerial view of Antsirabe, Madagascar", label: "Antsirabe" },
+  industryTeam: { src: industryTeam, w: 1536, h: 1024, alt: "Industry team handling logistics operations", label: "Industry expertise" },
+  dedicatedTeam: { src: dedicatedTeam, w: 1536, h: 1024, alt: "Dedicated team at their workstations", label: "Dedicated teams" },
 } as const;
 
 type Key = keyof typeof photos;
@@ -81,6 +123,8 @@ export function PhotoBanner({ k, caption }: { k: Key; caption?: string }) {
 }
 
 /** Two photos side by side — portrait-friendly, faces kept in frame. */
+export type PhotoKey = Key;
+
 export function PhotoDuo({ a, b }: { a: Key; b: Key }) {
   return (
     <div className="my-12 grid gap-4 md:grid-cols-2">

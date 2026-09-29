@@ -162,7 +162,7 @@ function ContactPage() {
             )}
           </div>
         </section>
-        <PhotoBanner k="building" caption="Visit our offices in Antsirabe" />
+        <PhotoBanner k="reception" caption="Visit our offices in Antsirabe" />
       </div>
     </>
   );

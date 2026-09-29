@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PhotoGallery, PhotoBanner } from "@/components/PhotoGallery";
-import officeTeam from "@/assets/office-team.jpg";
+import leaders from "@/assets/leaders.jpg";
 import { CTASection, ListGrid, PageHero, Pill, SectionHeading } from "@/components/blocks";
 import { internationalStandards, values } from "@/lib/content";
 
@@ -72,11 +72,11 @@ function AboutPage() {
           </div>
           <div className="md:col-span-5">
             <img
-              src={officeTeam}
+              src={leaders}
               loading="lazy"
               width={1024}
               height={1280}
-              alt="Team working in a modern office environment"
+              alt="European and Malagasy leadership team"
               className="aspect-[4/5] w-full rounded-xl object-cover outline outline-1 -outline-offset-1 outline-black/5"
             />
           </div>
@@ -99,7 +99,7 @@ function AboutPage() {
           />
           <ListGrid items={internationalStandards} />
         </section>
-        <PhotoGallery keys={["teamMeeting","building","training","openOffice","agent","developers"]} />
+        <PhotoGallery keys={["handshake","whiteboard","coffeeBreak","projectWalk"]} />
       </div>
 
       <CTASection />
