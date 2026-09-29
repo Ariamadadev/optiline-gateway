@@ -10,10 +10,16 @@ export const sendLeadEmail = createServerFn({ method: "POST" })
     const email = data["email"];
     const replyTo = email && z.string().email().safeParse(email).success ? email : undefined;
     const id = `${data["date"] ?? ""}-${data["source"] ?? ""}-${email ?? ""}`;
-    await sendTemplateEmail("lead-notification", "contact@optiline-mada.com", {
+    try {
+      await sendTemplateEmail("lead-notification", "contact@optiline-mada.com", {
       templateData: { source: data["source"], fields: data },
       idempotencyKey: `lead-notification-${id}`,
       ...(replyTo ? { replyTo } : {}),
     });
+    } catch (e) {
+      // e.g. domain_not_verified while DNS is pending — report, don't crash.
+      console.error("Lead email not sent:", e instanceof Error ? e.message : e);
+      return { ok: false };
+    }
     return { ok: true };
   });
