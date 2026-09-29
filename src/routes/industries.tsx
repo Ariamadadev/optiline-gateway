@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { PhotoGallery, PhotoBanner } from "@/components/PhotoGallery";
 import { CTASection, PageHero } from "@/components/blocks";
 import { industries } from "@/lib/content";
 
@@ -48,6 +49,7 @@ function IndustriesPage() {
             ))}
           </div>
         </section>
+        <PhotoBanner k="openOffice" caption="Teams dedicated to your industry" />
       </div>
 
       <CTASection title="Don't see your industry?" subtitle="Tell us about your activity — we build the team around it." />

@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { PhotoGallery, PhotoBanner } from "@/components/PhotoGallery";
 import { CTASection, PageHero } from "@/components/blocks";
 import { faqs } from "@/lib/content";
 import {
@@ -67,6 +68,7 @@ function FaqPage() {
             ))}
           </Accordion>
         </section>
+        <PhotoBanner k="agent" caption="Real people, ready to help" />
       </div>
 
       <CTASection />

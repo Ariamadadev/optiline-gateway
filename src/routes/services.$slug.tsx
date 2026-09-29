@@ -1,4 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { PhotoGallery, PhotoBanner } from "@/components/PhotoGallery";
 import { CTASection, ListGrid, PageHero, SectionHeading } from "@/components/blocks";
 import { howItWorks, solutions } from "@/lib/content";
 
@@ -85,6 +86,7 @@ function ServicePage() {
               ))}
           </div>
         </section>
+        <PhotoBanner k="teamMeeting" caption="A dedicated, managed team" />
       </div>
 
       <CTASection title={solution.cta} subtitle="Tell us the profiles and volumes — we prepare a custom proposal." />

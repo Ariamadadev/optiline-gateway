@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { PhotoGallery, PhotoBanner } from "@/components/PhotoGallery";
 import officeTeam from "@/assets/office-team.jpg";
 import worldNetworkMap from "@/assets/world-network-map.jpg";
 import { useLanguage } from "@/i18n/language";
@@ -492,6 +493,7 @@ function Index() {
             ))}
           </div>
         </section>
+        <PhotoGallery />
       </div>
 
       <CTASection />

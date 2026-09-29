@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { PhotoGallery, PhotoBanner } from "@/components/PhotoGallery";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, SectionHeading } from "@/components/blocks";
 import { Field, inputClass, SubmitButton, submitLead } from "@/components/forms";
@@ -161,6 +162,7 @@ function ContactPage() {
             )}
           </div>
         </section>
+        <PhotoBanner k="building" caption="Visit our offices in Antsirabe" />
       </div>
     </>
   );

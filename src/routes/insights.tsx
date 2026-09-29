@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { PhotoGallery, PhotoBanner } from "@/components/PhotoGallery";
 import { CTASection, PageHero } from "@/components/blocks";
 import { insights } from "@/lib/content";
 
@@ -51,6 +52,7 @@ function InsightsPage() {
             ))}
           </div>
         </section>
+        <PhotoBanner k="developers" />
       </div>
 
       <CTASection />

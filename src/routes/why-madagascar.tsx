@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { PhotoGallery, PhotoBanner } from "@/components/PhotoGallery";
 import worldNetworkMap from "@/assets/world-network-map.jpg";
 import { CTASection, ListGrid, PageHero, SectionHeading } from "@/components/blocks";
 import { continuityPoints, internationalStandards, securityPoints, whyMadagascar } from "@/lib/content";
@@ -123,6 +124,7 @@ function WhyMadagascarPage() {
           />
           <ListGrid items={continuityPoints} />
         </section>
+        <PhotoBanner k="building" caption="Antsirabe, Madagascar" />
       </div>
 
       <CTASection />

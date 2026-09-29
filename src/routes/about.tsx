@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { PhotoGallery, PhotoBanner } from "@/components/PhotoGallery";
 import officeTeam from "@/assets/office-team.jpg";
 import { CTASection, ListGrid, PageHero, Pill, SectionHeading } from "@/components/blocks";
 import { internationalStandards, values } from "@/lib/content";
@@ -98,6 +99,7 @@ function AboutPage() {
           />
           <ListGrid items={internationalStandards} />
         </section>
+        <PhotoGallery keys={["teamMeeting","building","training","openOffice","agent","developers"]} />
       </div>
 
       <CTASection />
