@@ -41,13 +41,13 @@ export const site = {
   leadEndpoint: "",
 };
 
-/** Statistics — placeholders until official figures are confirmed. */
+/** Statistics — provided by Optiline Mada. */
 export const stats: { label: string; value: string }[] = [
-  { label: "International Experience", value: "[to be provided]" },
-  { label: "Professionals", value: "[to be provided]" },
-  { label: "Workstations", value: "[to be provided]" },
-  { label: "Languages", value: "[to be provided]" },
-  { label: "Industries Served", value: "[to be provided]" },
+  { label: "International Experience", value: "25+ years" },
+  { label: "Professionals", value: "6,000+" },
+  { label: "Workstations", value: "3,000" },
+  { label: "Languages", value: "FR · EN · MG" },
+  { label: "Industries Served", value: "10+" },
 ];
 
 /** Infrastructure figures — placeholders until confirmed. */
