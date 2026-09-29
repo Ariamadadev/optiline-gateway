@@ -507,6 +507,17 @@ function Index() {
               ))}
             </div>
           </div>
+          <div className="mt-6 flex flex-col items-center justify-center gap-5 rounded-xl border border-border bg-card p-6 shadow-elevate sm:flex-row">
+            <svg viewBox="0 0 100 100" className="size-16 shrink-0" role="img" aria-label="Orange logo">
+              <rect width="100" height="100" fill="#FF7900" />
+              <rect x="16" y="78" width="68" height="7" fill="#FFFFFF" />
+            </svg>
+            <div className="text-center sm:text-left">
+              <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-accent">Connectivity partner</p>
+              <p className="mt-1 text-lg font-bold">Internet connectivity provided by Orange</p>
+              <p className="text-[14px] text-muted-foreground">Dual-fiber, high-speed links for uninterrupted operations.</p>
+            </div>
+          </div>
         </section>
         <PhotoGallery />
       </div>
