@@ -108,9 +108,6 @@ function ContactPage() {
                 </div>
               )}
             </dl>
-            <p className="mt-6 text-[12.5px] text-muted-foreground">
-              Contact details are placeholders until the official information is provided.
-            </p>
             {site.contact.mapsEmbedUrl && (
               <iframe
                 title="Optiline Mada location"
