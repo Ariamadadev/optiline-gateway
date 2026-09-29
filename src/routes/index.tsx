@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { PhotoGallery, PhotoBanner, PhotoDuo } from "@/components/PhotoGallery";
+import { PhotoBanner, PhotoDuo } from "@/components/PhotoGallery";
 import heroEuro from "@/assets/hero-euro.jpg";
 import worldNetworkMap from "@/assets/world-network-map.jpg";
 import { useLanguage } from "@/i18n/language";

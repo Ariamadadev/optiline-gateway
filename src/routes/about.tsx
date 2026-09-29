@@ -76,7 +76,7 @@ function AboutPage() {
               loading="lazy"
               width={1024}
               height={1280}
-              alt="Team working in a modern office environment"
+              alt="European and Malagasy leadership team"
               className="aspect-[4/5] w-full rounded-xl object-cover outline outline-1 -outline-offset-1 outline-black/5"
             />
           </div>
