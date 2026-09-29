@@ -52,8 +52,8 @@ export const stats: { label: string; value: string }[] = [
 
 /** Infrastructure figures — placeholders until confirmed. */
 export const infrastructureStats: { label: string; value: string }[] = [
-  { label: "Internet Speed", value: "[to be provided]" },
-  { label: "Number of Workstations", value: "[to be provided]" },
-  { label: "Available Positions", value: "[to be provided]" },
-  { label: "Office Capacity", value: "[to be provided]" },
+  { label: "Dual-Fiber Internet Speed", value: "Up to 10 Gbps" },
+  { label: "Scalable Workstations", value: "3,000" },
+  { label: "Operations Coverage", value: "24/7" },
+  { label: "Agents Capacity (2 shifts)", value: "6,000+" },
 ];
