@@ -51,7 +51,8 @@ export type Lead = {
 
 export async function submitLead(lead: Lead, endpoint: string) {
   try {
-    await sendLeadEmail({ data: lead });
+    const res = await sendLeadEmail({ data: lead });
+    if (!res.ok) throw new Error("Lead email not sent");
   } catch (e) {
     // Email failed: keep the lead locally so nothing is lost.
     console.error("Lead email failed", e);
