@@ -1,3 +1,4 @@
+import { sendLeadEmail } from "@/lib/leads.functions";
 import type { ReactNode } from "react";
 
 export function Field({
@@ -49,6 +50,14 @@ export type Lead = {
 };
 
 export async function submitLead(lead: Lead, endpoint: string) {
+  try {
+    await sendLeadEmail({ data: lead });
+  } catch (e) {
+    const stored = JSON.parse(window.localStorage.getItem("optiline-leads") ?? "[]");
+    stored.push(lead);
+    window.localStorage.setItem("optiline-leads", JSON.stringify(stored));
+    throw e;
+  }
   if (!endpoint) {
     // No endpoint configured yet: keep the lead locally so nothing is lost.
     const stored = JSON.parse(window.localStorage.getItem("optiline-leads") ?? "[]");
