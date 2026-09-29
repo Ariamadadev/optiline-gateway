@@ -44,8 +44,8 @@ export const site = {
 /** Statistics — provided by Optiline Mada. */
 export const stats: { label: string; value: string }[] = [
   { label: "International Experience", value: "25+ years" },
-  { label: "Professionals", value: "6,000+" },
-  { label: "Workstations", value: "3,000" },
+  { label: "Professionals Capacity", value: "6,000+" },
+  { label: "Scalable Workstations", value: "3,000" },
   { label: "Languages", value: "FR · EN · MG" },
   { label: "Industries Served", value: "10+" },
 ];
