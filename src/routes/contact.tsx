@@ -77,6 +77,16 @@ function ContactPage() {
                 <dt className="text-[12px] uppercase tracking-[0.16em] text-muted-foreground">Hours</dt>
                 <dd className="mt-1 text-foreground">{site.contact.hours}</dd>
               </div>
+              <div>
+                <dt className="text-[12px] uppercase tracking-[0.16em] text-muted-foreground">Registration</dt>
+                <dd className="mt-1 text-foreground">
+                  NIF {site.contact.nif}
+                  <br />
+                  STAT {site.contact.stat}
+                  <br />
+                  {site.contact.rcs}
+                </dd>
+              </div>
               {site.contact.whatsapp && (
                 <div>
                   <dt className="text-[12px] uppercase tracking-[0.16em] text-muted-foreground">WhatsApp</dt>

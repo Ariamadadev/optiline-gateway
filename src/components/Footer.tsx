@@ -98,9 +98,14 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-navy-foreground/15">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 py-5 text-[12.5px] text-navy-foreground/50 sm:flex-row">
-          <span>© 2026 Optiline Mada. All rights reserved.</span>
-          <span>Antananarivo, Madagascar</span>
+        <div className="mx-auto max-w-6xl px-6 py-5 text-[12.5px] text-navy-foreground/50">
+          <div className="flex flex-col items-center justify-between gap-3 sm:flex-row">
+            <span>© 2026 Optiline Mada. All rights reserved.</span>
+            <span>Antsirabe, Madagascar</span>
+          </div>
+          <p className="mt-3 text-center text-[11.5px] tracking-wide sm:text-left">
+            NIF {site.contact.nif} · STAT {site.contact.stat} · {site.contact.rcs}
+          </p>
         </div>
       </div>
     </footer>
