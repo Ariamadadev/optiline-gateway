@@ -11,10 +11,10 @@ export const site = {
   description:
     "Optiline Mada provides skilled professionals, modern workspaces, reliable technology and complete local management for international companies outsourcing to Madagascar.",
   contact: {
-    email: "contact@example.com", // TO BE PROVIDED
-    phone: "+000 00 000 00 00", // TO BE PROVIDED
+    email: "paul@optiline-mada.com", // TO BE PROVIDED
+    phone: "+261 32 03 682 18\n+33 6 15 83 75 61\n", // TO BE PROVIDED
     whatsapp: "", // TO BE PROVIDED — full international number, e.g. 261340000000
-    address: "Address to be provided — Antananarivo, Madagascar", // TO BE PROVIDED
+    address: "Tomboarivo, 09 B 193, MAHAFALY, TOMBOARIVO , Antsirabe, Madagascar", // TO BE PROVIDED
     hours: "Monday – Friday, working hours to be confirmed", // TO BE PROVIDED
     mapsEmbedUrl: "", // TO BE PROVIDED — Google Maps embed URL
   },
