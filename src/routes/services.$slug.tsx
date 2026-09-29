@@ -86,7 +86,7 @@ function ServicePage() {
               ))}
           </div>
         </section>
-        <PhotoBanner k="teamMeeting" caption="A dedicated, managed team" />
+        <PhotoBanner k="serverRoom" caption="Secure, high-speed infrastructure" />
       </div>
 
       <CTASection title={solution.cta} subtitle="Tell us the profiles and volumes — we prepare a custom proposal." />

@@ -68,7 +68,7 @@ function FaqPage() {
             ))}
           </Accordion>
         </section>
-        <PhotoBanner k="agent" caption="Real people, ready to help" />
+        <PhotoBanner k="helpDesk" caption="Real people, ready to help" />
       </div>
 
       <CTASection />

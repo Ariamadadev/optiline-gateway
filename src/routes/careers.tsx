@@ -114,7 +114,7 @@ function CareersPage() {
             </form>
           )}
         </section>
-        <PhotoGallery title="Grow with us" subtitle="Training, teamwork and a modern workplace in Madagascar." keys={["training","teamMeeting","agent","developers","openOffice","building"]} />
+        <PhotoGallery title="Grow with us" subtitle="Training, teamwork and a modern workplace in Madagascar." keys={["newHires","interview","coaching","terrace"]} />
       </div>
     </>
   );

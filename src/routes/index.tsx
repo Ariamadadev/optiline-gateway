@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PhotoGallery, PhotoBanner, PhotoDuo } from "@/components/PhotoGallery";
-import officeTeam from "@/assets/office-team.jpg";
+import heroEuro from "@/assets/hero-euro.jpg";
 import worldNetworkMap from "@/assets/world-network-map.jpg";
 import { useLanguage } from "@/i18n/language";
 import {
@@ -92,10 +92,10 @@ function Index() {
             <div className="relative pb-5 pl-5">
               <span className="absolute bottom-0 left-0 h-3/5 w-3/5 rounded-xl bg-accent" />
               <img
-                src={officeTeam}
+                src={heroEuro}
                 width={1024}
                 height={1280}
-                alt="Professionals working at modern workstations in an open-plan office"
+                alt="European manager and Malagasy team lead reviewing work together in a bright office"
                 className="relative aspect-[4/5] w-full rounded-xl object-cover shadow-elevate"
               />
               <div className="absolute bottom-10 left-0 border-l-4 border-coral bg-navy px-5 py-4 text-navy-foreground shadow-elevate">
@@ -430,7 +430,7 @@ function Index() {
           </div>
         </section>
 
-        <PhotoDuo a="officeTeam" b="teamMeeting" />
+        <PhotoDuo a="officeTeam" b="clientCall" />
         {/* INDUSTRIES */}
         <section className="border-t border-border py-20 md:py-24">
           <div className="mb-10">
@@ -519,7 +519,6 @@ function Index() {
             </div>
           </div>
         </section>
-        <PhotoGallery />
       </div>
 
       <CTASection />

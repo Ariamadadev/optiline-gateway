@@ -124,7 +124,7 @@ function WhyMadagascarPage() {
           />
           <ListGrid items={continuityPoints} />
         </section>
-        <PhotoBanner k="building" caption="Antsirabe, Madagascar" />
+        <PhotoBanner k="antsirabe" caption="Antsirabe, Madagascar" />
       </div>
 
       <CTASection />

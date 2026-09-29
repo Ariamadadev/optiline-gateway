@@ -97,7 +97,7 @@ function SolutionsPage() {
             ))}
           </div>
         </section>
-        <PhotoGallery title="Teams behind every solution" keys={["openOffice","agent","developers","teamMeeting","training","building"]} />
+        <PhotoGallery title="Teams behind every solution" keys={["dedicatedTeam","backOffice","creativeTeam","supportAgent"]} />
       </div>
 
       <CTASection />

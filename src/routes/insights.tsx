@@ -52,7 +52,7 @@ function InsightsPage() {
             ))}
           </div>
         </section>
-        <PhotoBanner k="developers" />
+        <PhotoBanner k="insightsReader" />
       </div>
 
       <CTASection />
