@@ -13,7 +13,7 @@ export const sendLeadEmail = createServerFn({ method: "POST" })
     await sendTemplateEmail("lead-notification", "contact@optiline-mada.com", {
       templateData: { source: data["source"], fields: data },
       idempotencyKey: `lead-notification-${id}`,
-      replyTo,
+      ...(replyTo ? { replyTo } : {}),
     });
     return { ok: true };
   });
