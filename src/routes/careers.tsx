@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { PhotoGallery, PhotoBanner } from "@/components/PhotoGallery";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Pill, SectionHeading } from "@/components/blocks";
 import { Field, inputClass, SubmitButton, submitLead } from "@/components/forms";
@@ -113,6 +114,7 @@ function CareersPage() {
             </form>
           )}
         </section>
+        <PhotoGallery title="Grow with us" subtitle="Training, teamwork and a modern workplace in Madagascar." keys={["training","teamMeeting","agent","developers","openOffice","building"]} />
       </div>
     </>
   );

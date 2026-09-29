@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { PhotoGallery, PhotoBanner } from "@/components/PhotoGallery";
 import { CTASection, ListGrid, PageHero, SectionHeading } from "@/components/blocks";
 import { customisableItems, solutions, teamSizes } from "@/lib/content";
 
@@ -96,6 +97,7 @@ function SolutionsPage() {
             ))}
           </div>
         </section>
+        <PhotoGallery title="Teams behind every solution" keys={["openOffice","agent","developers","teamMeeting","training","building"]} />
       </div>
 
       <CTASection />
