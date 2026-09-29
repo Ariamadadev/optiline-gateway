@@ -1,3 +1,4 @@
+import { sendLeadEmail } from "@/lib/leads.functions";
 import type { ReactNode } from "react";
 
 export function Field({
@@ -49,16 +50,20 @@ export type Lead = {
 };
 
 export async function submitLead(lead: Lead, endpoint: string) {
-  if (!endpoint) {
-    // No endpoint configured yet: keep the lead locally so nothing is lost.
+  try {
+    await sendLeadEmail({ data: lead });
+  } catch (e) {
+    // Email failed: keep the lead locally so nothing is lost.
+    console.error("Lead email failed", e);
     const stored = JSON.parse(window.localStorage.getItem("optiline-leads") ?? "[]");
     stored.push(lead);
     window.localStorage.setItem("optiline-leads", JSON.stringify(stored));
-    return;
   }
-  await fetch(endpoint, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(lead),
-  });
+  if (endpoint) {
+    await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(lead),
+    }).catch((e) => console.error("Lead webhook failed", e));
+  }
 }
