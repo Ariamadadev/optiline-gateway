@@ -56,8 +56,8 @@ export const Route = createFileRoute("/lovable/email/transactional/preview")({
             )
             const resolvedSubject =
               typeof entry.subject === 'function'
-                ? entry.subject(entry.previewData)
-                : entry.subject
+                ? entry!.subject(entry!.previewData ?? {})
+                : entry!.subject
 
             results.push({
               templateName: name,
