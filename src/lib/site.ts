@@ -17,6 +17,9 @@ export const site = {
     address: "Tomboarivo, 09 B 193, MAHAFALY, TOMBOARIVO , Antsirabe, Madagascar", // TO BE PROVIDED
     hours: "Monday – Friday, working hours to be confirmed", // TO BE PROVIDED
     mapsEmbedUrl: "", // TO BE PROVIDED — Google Maps embed URL
+    nif: "101 921 24 09",
+    stat: "78200 12 2025 0 01330",
+    rcs: "RCS Antsirabe 2026 A 00038",
   },
   social: {
     linkedin: "", // TO BE PROVIDED
